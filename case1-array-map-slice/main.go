@@ -49,8 +49,8 @@ func main() {
 	var primes []int
 	for i := 10; i < 30; i++ {
 		if i%2 != 0 && i%3 != 0 && i%5 != 0 && i%7 != 0 {
+			primes = append(primes, i)
 		}
-		primes = append(primes, i)
 	}
 
 	fmt.Println(primes)
