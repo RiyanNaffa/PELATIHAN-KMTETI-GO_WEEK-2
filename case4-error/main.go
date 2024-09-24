@@ -21,7 +21,8 @@ var ErrModByZero = errors.New("cannot find remainders of division by zero")
 // sesuai.
 func findRoot(num float64) (float64, error) {
 	if num < 0 {
-		return 0, ErrDevideByZero
+		// return 0, ErrDevideByZero
+		return 0, ErrNegativeNumber
 	}
 	res := math.Sqrt(num)
 	return res, nil
