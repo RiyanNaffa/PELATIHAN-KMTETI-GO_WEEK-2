@@ -14,7 +14,7 @@ type Mahasiswa struct {
 // Perbaiki fungsi updateStatus, pendefinisian variabel asdos, serta
 // pemanggilan fungsi updateStatus
 
-func updateStatus(mhs []Mahasiswa) {
+func updateStatus(mhs []*Mahasiswa) {
 	mhs[2].IsAsdos = true
 }
 
@@ -23,7 +23,7 @@ func main() {
 	m2 := Mahasiswa{Name: "Budi", IsAsdos: true}
 	m3 := Mahasiswa{Name: "Caca", IsAsdos: false}
 
-	asdos := []Mahasiswa{m1, m2, m3}
+	asdos := []*Mahasiswa{&m1, &m2, &m3}
 
 	updateStatus(asdos)
 	fmt.Println(m3)
